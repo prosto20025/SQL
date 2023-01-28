@@ -1,0 +1,5 @@
+3. For each city, give the number of students that come from this city.
+
+SELECT CITY, COUNT(SNO)
+FROM Students
+GROUP BY CITY;
