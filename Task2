@@ -1,0 +1,6 @@
+2. How many students have their names starting from letter A?
+
+
+SELECT COUNT(SNAME)
+FROM Students
+WHERE LEFT(SNAME, 1) = 'A';
