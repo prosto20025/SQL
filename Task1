@@ -1,0 +1,8 @@
+1. Show identifiers and names of courses held on the 1st year of study. Order them alphabetically
+according to the names of courses
+
+
+SELECT CNO, CNAME
+FROM Courses
+WHERE STUDYEAR = 1
+ORDER BY CNAME ASC;
