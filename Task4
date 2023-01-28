@@ -1,0 +1,6 @@
+4. For each teacher (id, title and name), give courses (ids, names) that he/she conducted.
+
+SELECT DISTINCT Teachers.TNO, Teachers.TITLE, Teachers.TNAME, Courses.CNO, Courses.CNAME
+FROM Teachers
+INNER JOIN TSC ON Teachers.TNO = TSC.TNO
+INNER JOIN Courses ON TSC.CNO = Courses.CNO;
