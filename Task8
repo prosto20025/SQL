@@ -1,0 +1,6 @@
+8. How many teachers did not have any classes?
+
+SELECT COUNT(*) FROM Teachers
+WHERE Teachers.Tno NOT IN
+		(SELECT Teachers.Tno FROM Teachers
+		JOIN TSC ON TSC.Tno = Teachers.Tno);
