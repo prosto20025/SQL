@@ -1,0 +1,6 @@
+10. Which students (id, name) have the greatest average grade?
+
+SELECT Students.Sno, Students.Sname, TSC.Grade
+FROM Students
+JOIN TSC ON TSC.Sno = Students.Sno
+WHERE TSC.Grade = (SELECT MAX(TSC.Grade) FROM TSC);
