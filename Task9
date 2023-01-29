@@ -1,0 +1,6 @@
+9. For each year of study, show the sum of teaching hours. Order the result according to the years of study.
+
+SELECT Courses.Studyear, SUM(TSC.Hours) FROM Courses
+JOIN TSC ON TSC.Cno = Courses.Cno
+GROUP BY Courses.Studyear
+ORDER BY Courses.Studyear
