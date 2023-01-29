@@ -1,0 +1,6 @@
+7. On which year of study there was the greatest average grade?
+
+SELECT TOP 1 Studyear FROM Courses
+JOIN TSC ON Tsc.Cno = Courses.Cno
+GROUP BY Studyear
+ORDER BY AVG(TSC.grade) desc
