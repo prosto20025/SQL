@@ -1,0 +1,5 @@
+6. On which year of study there were most courses?
+
+SELECT TOP 1 Courses.Studyear FROM Courses
+GROUP BY Courses.Studyear
+ORDER BY COUNT(*) desc
