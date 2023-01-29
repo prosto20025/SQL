@@ -1,0 +1,7 @@
+11. Show the list of all students (ids, names) ordered according to decreasing average grades.
+
+SELECT Students.Sno, Students.Sname
+FROM Students
+JOIN TSC ON TSC.Sno = Students.Sno
+GROUP BY Students.Sno, Students.Sname
+ORDER BY AVG(TSC.Grade) desc
