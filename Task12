@@ -1,0 +1,6 @@
+12. Which teachers (id, title, name) have the most number of subordinates?
+
+SELECT TOP 1 Teachers.Tno, Teachers.Title, Teachers.Tname
+FROM Teachers
+JOIN Teachers as subordinates ON Teachers.Tno = subordinates.SupNo
+GROUP BY Teachers.Tno, Teachers.Title, Teachers.Tname;
