@@ -1,0 +1,5 @@
+13. Which teachers (id, title, name) have no supervisor?
+
+SELECT Teachers.Tno, Teachers.Title, Teachers.Tname
+FROM Teachers
+WHERE SupNo is NULL
