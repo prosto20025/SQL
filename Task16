@@ -1,0 +1,6 @@
+16. Show ids and names of those students who obtained at least one grade that is maximal from all the grades obtained by anyone. How many students satisfy this condition?
+
+SELECT Students.Sno, Students.Sname
+FROM Students
+JOIN TSC ON TSC.Sno = Students.Sno
+WHERE TSC.Grade = (SELECT MAX(TSC.Grade) FROM TSC);
