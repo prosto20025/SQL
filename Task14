@@ -1,0 +1,8 @@
+14. Which teachers (ids, names) conducted more than 3 courses and how many courses they conducted?
+
+SELECT Teachers.Tno, Teachers.Tname, COUNT(Courses.Cno) as ConductedCourses
+FROM Teachers
+JOIN TSC ON TSC.Tno = Teachers.Tno
+JOIN Courses ON Courses.Cno = TSC.Cno
+GROUP BY Teachers.Tno, Teachers.Tname
+HAVING COUNT(Courses.Cno) > 3;
