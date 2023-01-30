@@ -1,0 +1,6 @@
+15. Show ids and names of those students who obtained at least one 5.0 from any subject
+
+SELECT DISTINCT Students.Sno, Students.Sname
+FROM Students
+JOIN TSC ON TSC.Sno = Students.Sno
+WHERE TSC.Grade >= 5;
