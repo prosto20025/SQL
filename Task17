@@ -1,0 +1,7 @@
+17. How many students had mathematics on the 2nd year of study?
+
+SELECT COUNT(*) Students FROM Students
+JOIN TSC ON TSC.Sno = Students.Sno
+JOIN Courses ON Courses.Cno = TSC.Cno
+WHERE Courses.Cname = 'Mathematics'
+	AND Courses.Studyear = 2
